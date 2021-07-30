@@ -42,14 +42,28 @@
     align-items: center;
 }
 
-.header-2 div {
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00FF04;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 15px 30px 0px;
+}
+
+.dot::after {
+    content: '';
+    padding-bottom: 100%;
+}
+
+.header-2 .profile {
     border-left: lightgray solid 2px;
 }
 
 .header-icon {
     height: 35px;
     width: 35px;
-    margin: 0px 15px 0px 50px;
+    margin: 0px 0px 0px 50px;
 }
 
 .header-icon:hover {
@@ -150,7 +164,7 @@
     padding: 7px 15px;
 }
 
-.traffic-btn button:active {
+#active {
     background-color: rgb(85, 199, 85);
     color: white;
 } 
@@ -177,7 +191,7 @@ canvas {
     height: 110px;
     width: 110px;
     background-color: #7477bf;
-    border-radius: 100px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,6 +216,7 @@ canvas {
     border: solid 2px lightgray;
     border-radius: 10px;
     display: flex;
+    align-items: center;
     margin: 10px 10px 20px 10px;
     padding: 25px;
 }
@@ -496,6 +511,7 @@ input:checked + .slider:before {
     /* CHARTS STYLES */
     .charts-container {
         display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "line-chart line-chart"
                              "bar-chart pie-chart";
     }
@@ -513,6 +529,7 @@ input:checked + .slider:before {
         grid-area: pie-chart;
     }
 
+
     /* SOCIAL STYLES */
     .social-card-container {
         display: flex;
@@ -520,6 +537,25 @@ input:checked + .slider:before {
 
     .social-card {
         width: 100%;
+        height: 100%;
+        font-size: 1vw;
+    }
+
+    .social-icons {
+        width: 50%;
+        height: 50%;
+    }
+    
+    .outer-circle {
+        width: 50%;
+        height: 50%;
+        background-color: #7477bf;
+        border-radius: 50%;
+    }
+
+    .outer-circle::after {
+        content: '';
+        padding-bottom: 100%;
     }
 
     /* NEW MEMBERS STYLES */
