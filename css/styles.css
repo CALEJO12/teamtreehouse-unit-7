@@ -7,19 +7,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* hard reset */
-* { 
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
-    box-sizing: border-box;
-    position: relative;
-    padding: 0; margin: 0;
-} 
-
-html {
-    width: 100%; /* 01 */
-    /* tells html to go ahead and feel free to be 100% width */
-}
 /* MAIN-CONTAINER STYLES */
 
 .main-container {
@@ -31,37 +18,34 @@ html {
 .header-container {
     background-color: #7477BF;
     color: white;
+    padding: 5px 5px;
 }
 
 .header {
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
 }
 
-.header-1 {
-    width: 20%;
-    display: flex;
-    justify-content: flex-start;
+.header-child {
+    flex: 1;
 }
 
-.header-2 {
-    width: 80%;
-    margin-left: 65px;
+
+
+.header-child-1 {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    align-items: center;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     background-color: #00FF04;
     border-radius: 50%;
     display: inline-block;
-    margin: 0px 15px 30px 0px;
+    margin: 0px 10px 30px 0px;
 }
 
 .dot::after {
@@ -74,8 +58,8 @@ html {
 }
 
 .header-icon {
-    height: 35px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
     margin: 0px 0px 0px 50px;
 }
 
@@ -83,27 +67,38 @@ html {
     animation: wiggle 1s;
 }
 
+.profile {
+    border-left: 1px solid lightgray;
+}
+
 .profile-picture {
     border-radius: 100px;
-    height: 50px;
-    width: 50px;
-    margin: 0px 15px;
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px;
+}
+
+.header-child-1 p {
+    width: 75px;
+    font-size: .7em;
 }
 
 /* NAVIGATION-CONTAINER STYLES */
 
 .navigation-container {
     background-color: #4F5275;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.navigation-container a {
+    display: block;
+}
+
 .nav-icons {
-    height: 50px;
-    width: 50px;
-    margin: 12px 25px;
+    width: 30px;
+    margin: 10px 20px;
 }
 
 /* CONTENT-CONTAINER STYLES */
@@ -135,10 +130,10 @@ html {
 }
 
 .alert { 
-    font-size: 1.4em;
+    font-size: .8em;
     display: flex;
     align-items: center;
-    padding: 13px 20px;
+    padding: 5px 15px;
     background-color: #7477BF;
     margin: 20px;
     border-radius: 5px;
@@ -150,7 +145,7 @@ html {
 }
 
 .close {
-    width: 20%;
+    width: 10%;
     display: flex;
     justify-content: flex-end;
     color: white;
@@ -162,19 +157,23 @@ html {
     font-size: 1em;
 }
 
+.traffic-container h2 {
+    font-size: 1em;
+}
+
 .chart h2{
-    font-size: 1.3em;
+    font-size: 1em;
     margin: 20px 0px;
 }
 
 .traffic-btn button {
-    font-size: 1.3em;
-    border-radius: 40px;
+    font-size: 1em;
+    border-radius: 30px;
     border: none;
     background: none;
     cursor: pointer;
     margin: 0;
-    padding: 7px 15px;
+    padding: 7px 5px;
 }
 
 #active {
@@ -195,20 +194,16 @@ canvas {
 
 /* SOCIAL SECTION */
 
-.social-icons {
-    height: 60px;
-    width: 60px;
-}
-
 .outer-circle {
-    height: 110px;
-    width: 110px;
+    width: 75px;
+    height: 75px;
     background-color: #7477bf;
-    border-radius: 50%;
+    border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 15px;
+    padding: 20px;
 }
 
 .social-icons path {
@@ -216,7 +211,8 @@ canvas {
 }
 
 .social-container h2 {
-    margin: 20px 20px 0px;
+    font-size: 1em;
+    margin: 20px 10px 0px;
 }
 
 .social-container {
@@ -231,16 +227,16 @@ canvas {
     display: flex;
     align-items: center;
     margin: 10px 10px 20px 10px;
-    padding: 25px;
+    padding: 10px;
 }
 
 .social-text h3 {
     color: #7477bf;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .social-text p {
-    font-size: 3.2em;
+    font-size: 2em;
 }
 
 /* MEMBERS STYLE */
@@ -551,19 +547,6 @@ input:checked + .slider:before {
     .social-card {
         width: 100%;
         height: 100%;
-        font-size: 1vw;
-    }
-
-    .social-icons {
-        width: 50%;
-        height: 50%;
-    }
-    
-    .outer-circle {
-        width: 50%;
-        height: 50%;
-        background-color: #7477bf;
-        border-radius: 50%;
     }
 
     .outer-circle::after {
