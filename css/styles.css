@@ -7,6 +7,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+h2 {
+    font-size: 1.2em;
+}
+
 /* MAIN-CONTAINER STYLES */
 
 .main-container {
@@ -156,18 +160,12 @@
     margin: 0px 20px;
     font-size: 1em;
 }
-
-.traffic-container h2 {
-    font-size: 1em;
-}
-
 .chart h2{
-    font-size: 1em;
     margin: 20px 0px;
 }
 
 .traffic-btn button {
-    font-size: 1em;
+    font-size: 1.2em;
     border-radius: 30px;
     border: none;
     background: none;
@@ -211,7 +209,6 @@ canvas {
 }
 
 .social-container h2 {
-    font-size: 1em;
     margin: 20px 10px 0px;
 }
 
